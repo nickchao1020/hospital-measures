@@ -1,6 +1,5 @@
 import pandas as pd
 import json
-import seaborn as sns
 
 
 def get_counts(es, index='hospital-index'):
