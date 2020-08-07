@@ -1,3 +1,15 @@
+# Overview
+
+This repository contains a pipeline to create an elasticsearch index from the Hospital Measurement data and upload the docker image to AWS ECR.
+
+For evaluating code:
+
+The code I wrote to setup the necessary .json file that populates my elasticsearch index is located in /scripts/etl.py.
+The script /scripts/create.sh will create the index, then upload its mapping and documents.
+
+/scripts/create_plot.py is where I query elasticsearch and build the plots. The logic to build the query is in /scripts/utils.py
+
+
 # Usage
 
 ### Starting ElasticSearch
