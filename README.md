@@ -1,6 +1,6 @@
 # Overview
 
-This repository contains a pipeline to create an elasticsearch index from the Hospital Measurement data and upload the docker image to AWS ECR.
+This repository contains a pipeline to create an elasticsearch index from the Hospital Measurement data, make queries on the index, and upload the docker image to AWS ECR.
 
 For evaluating code:
 
@@ -78,3 +78,4 @@ And setup repository called hospital-data:
     --repository-name hospital-data \
     --image-scanning-configuration scanOnPush=true \
     --region us-east-1`
+
