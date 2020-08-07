@@ -52,25 +52,6 @@ to save the plot:
 
 We can now push the elasticsearch image we are using to ECR, which allows us to access it through services like ECS.
 
-(Assuming we've setup an ECR repository called `hospital-data` and the AWS CLI is authenticated to the registry we are pushing to)
-e.g.
-
-Authenticating AWS CLI:
-
-`aws ecr get-login-password \
-    --region <region> \
-| docker login \
-    --username AWS \
-    --password-stdin <aws_account_id>.dkr.ecr.us-east-1.amazonaws.com`
-
-Returns login commands.
-
-And setup repository called hospital-data:
-`aws ecr create-repository \
-    --repository-name hospital-data \
-    --image-scanning-configuration scanOnPush=true \
-    --region us-east-1`
-
 First, get the image id by running `docker images` and finding the elasticsearch image.
 
 Next, tag the image using it's image id to our ECR repository using this command:
@@ -81,3 +62,19 @@ Finally, push the image to ECR using:
 
 `docker push <aws_id>.dkr.ecr.<aws-region>.amazonaws.com/hospital-data`
 
+
+(This assumed we've already setup an ECR repository called `hospital-data` and the AWS CLI is authenticated to the registry we are pushing to)
+
+e.g.
+
+Authenticating AWS CLI:
+
+`aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <aws_account_id>.dkr.ecr.us-east-1.amazonaws.com`
+
+Returns login commands.
+
+And setup repository called hospital-data:
+`aws ecr create-repository \
+    --repository-name hospital-data \
+    --image-scanning-configuration scanOnPush=true \
+    --region us-east-1`
