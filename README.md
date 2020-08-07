@@ -12,6 +12,8 @@ The script /scripts/create.sh will create the index, then upload its mapping and
 
 The final barplot is in plot.png.
 
+This document concludes with a Next Steps portion, describing my next actions on this project.
+
 # Usage
 
 ### Starting ElasticSearch
@@ -80,3 +82,6 @@ Returns login commands.
 And setup repository called hospital-data:
 `aws ecr create-repository --repository-name hospital-data --image-scanning-configuration scanOnPush=true --region us-east-1`
 
+### Next Steps
+
+This configuration with ElasticSearch is not a realistic solution for production, and further configurations would likely be needed for this to properly run on ECS or other services. I would use Docker Compose to setup a multi-node cluster of ElasticSearch, and setup a docker file that builds on the elasticsearch image and runs the commands to properly configure elasticsearch.
