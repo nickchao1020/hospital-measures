@@ -76,8 +76,5 @@ Authenticating AWS CLI:
 Returns login commands.
 
 And setup repository called hospital-data:
-`aws ecr create-repository \
-    --repository-name hospital-data \
-    --image-scanning-configuration scanOnPush=true \
-    --region us-east-1`
+`aws ecr create-repository --repository-name hospital-data --image-scanning-configuration scanOnPush=true --region us-east-1`
 
