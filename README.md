@@ -30,7 +30,11 @@ If permissions are denied, give permissions using `sudo chmod 755 create.sh`.
 
 ### Generating plot
 
-Now that the index is created and populated, running the create_plot.ipynb notebook will generate the plot.
+Now that the index is created and populated, the state-measurement bar plot can created by running
+the create_plot.py script. This script takes an input argument for the filepath where you want
+to save the plot:
+
+`python3 scripts/create_plot.py path/to/save/plot.png`
 
 ### Pushing image to AWS ECR
 
