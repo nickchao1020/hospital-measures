@@ -30,7 +30,7 @@ After elasticsearch is running, an index for the hospital measurement dataset is
 
 `python3 etl.py path/to/Healthcare Associated Infections - Hospital.csv`
 
-This script will create the .json file that can be used to populate the index with the data.
+This script will create the documents.json file that can be used to populate the index with the data.
 
 ### Create the hospital measure index
 
