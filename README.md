@@ -28,7 +28,7 @@ Now that we have an elasticsearch docker image, we can run it with:
 
 After elasticsearch is running, an index for the hospital measurement dataset is created by running:
 
-`python3 etl.py path/to/Healthcare Associated Infections - Hospital.csv`
+`python3 etl.py "path/to/Healthcare Associated Infections - Hospital.csv"`
 
 This script will create the documents.json file that can be used to populate the index with the data.
 
@@ -37,6 +37,8 @@ This script will create the documents.json file that can be used to populate the
 With the data prepared, navigate to the es-index/ directory and run the following command to build the index:
 
 `./create.sh`
+
+This shell script will run the curl commands to create the index, then upload the mapping and documents.
 
 If permissions are denied, give permissions using `sudo chmod 755 create.sh`.
 
