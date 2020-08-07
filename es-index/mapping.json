@@ -1,0 +1,25 @@
+{
+    "properties": {
+        "facility_id": { "type": "keyword" },
+        "facility_name": { "type": "text" },
+        "address": { "type": "text" },
+        "city": { "type": "keyword"  },
+        "state": { "type": "keyword"  },
+        "zip": { "type": "integer" },
+        "county": { "type": "text"  },
+        "phone_number": { "type": "text"  },
+        "measure_id": { "type": "keyword"  },
+        "measure_name": { "type": "keyword"  },
+        "compared_to_national": { "type": "keyword" },
+        "score": { "type": "float" },
+        "footnote": { "type": "keyword" },
+        "start_date": {
+            "type": "date",
+            "format": "MM/dd/YYYY"
+        },
+        "end_date": {
+            "type": "date",
+            "format": "MM/dd/YYYY"
+        }
+    }
+}
