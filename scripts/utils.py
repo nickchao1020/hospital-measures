@@ -32,6 +32,7 @@ def get_counts(es, index='hospital-index'):
     })
     res = es.search(index=index, body=query)
     counts += res['aggregations']['buckets']['buckets']
+    # handle pagination
     while 'after_key' in res['aggregations']['buckets']:
         after_key = res['aggregations']['buckets']['after_key']
         query = json.dumps({
