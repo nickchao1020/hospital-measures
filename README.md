@@ -84,4 +84,4 @@ And setup repository called hospital-data:
 
 ### Next Steps
 
-This configuration with ElasticSearch is not a realistic solution for production, and further configurations would likely be needed for this to properly run on ECS or other services. I would use Docker Compose to setup a multi-node cluster of ElasticSearch, and setup a docker file that builds on the elasticsearch image and runs the commands to properly configure elasticsearch.
+This configuration with ElasticSearch is not a realistic solution for production, and further configurations would likely be needed for this to properly run on ECS or other services. I would use Docker Compose to setup a multi-node cluster of ElasticSearch, and setup a docker file that builds on the elasticsearch image and runs the commands to properly configure elasticsearch for cloud hosting.
