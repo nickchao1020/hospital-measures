@@ -10,6 +10,8 @@ The script /scripts/create.sh will create the index, then upload its mapping and
 /scripts/create_plot.py is where I query elasticsearch and build the plots. The logic to build the query is in /scripts/utils.py
 
 
+The final barplot is in plot.png.
+
 # Usage
 
 ### Starting ElasticSearch
